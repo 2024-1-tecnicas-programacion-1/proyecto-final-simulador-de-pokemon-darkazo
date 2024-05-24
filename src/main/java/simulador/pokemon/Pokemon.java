@@ -16,29 +16,46 @@ public abstract class Pokemon {
         this.estado = estado;
     }//Cierre constructor
 
-    public String getNombrePokemon() {
+    public String getNombre() {
         return nombrePokemon;
     }
 
+    public void setNombre(String nombrePokemon) {
+        this.nombrePokemon = nombrePokemon;
+    }
+  
     public int getSalud() {
         return salud;
+    }
+
+    public void setSalud(int salud) {
+        this.salud = salud;
     }
 
     public int getPuntosDeAtaque() {
         return puntosDeAtaque;
     }
 
+    public void setPuntosDeAtaque(int puntosDeAtaque) {
+        this.puntosDeAtaque = puntosDeAtaque;
+    }
+
     public TipoPokemon getTipo() {
         return tipo;
+    }
+
+    public void setTipo(TipoPokemon tipo) {
+        this.tipo = tipo;
     }
 
     public String getEstado() {
         return estado;
     }
-    
-    
-    
-    
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     public abstract void atacar(Pokemon oponentPokemon);
     
     public abstract int recibirDaño(int daño);
