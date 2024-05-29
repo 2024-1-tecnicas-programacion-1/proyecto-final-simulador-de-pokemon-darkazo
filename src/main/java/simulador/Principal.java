@@ -117,7 +117,7 @@ public class Principal {
             System.out.println("1. Ver equipo de Pokémones");
             System.out.println("2. Agregar Pokémon al equipo");
             System.out.println("3. Encontar Pokémon");
-            System.out.println("4. Volver a gestionar Entrenadores");
+            System.out.println("4. Volver a Gestionar Entrenadores");
             System.out.print("Elige una opción: ");
             opcion=sc.nextInt();
             
