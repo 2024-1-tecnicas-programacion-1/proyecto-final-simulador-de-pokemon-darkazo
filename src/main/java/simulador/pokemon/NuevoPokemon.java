@@ -4,7 +4,7 @@ package simulador.pokemon;
 import java.util.List;
 
 public class NuevoPokemon extends Pokemon {
-    public NuevoPokemon(String nombre, int salud, int puntosDeAtaque, List<TipoPokemon> tipo, Estado estado) {
+    public NuevoPokemon(String nombre, int salud, int puntosDeAtaque, List<String> tipo, Estado estado) {
         super(nombre, salud, puntosDeAtaque, tipo, estado);
     }
 

@@ -263,23 +263,8 @@ public class Principal {
                 System.out.println("");
             }
         }
-
-        System.out.print("Ingrese la salud del nuevo Pokémon: ");
-        int salud = sc.nextInt();
-        System.out.print("Ingrese los puntos de ataque del nuevo Pokémon: ");
-        int puntosDeAtaque = sc.nextInt();
-        System.out.print("Ingrese el tipo del nuevo Pokémon (FUEGO, AGUA, PLANTA, etc.): ");
-        String tiposInput = sc.nextLine();
-        List<TipoPokemon> tipos = new ArrayList<>();
-        for (String tipo : tiposInput.split(",")) {
-            tipos.add(TipoPokemon.valueOf(tipo.trim().toUpperCase()));
-        }
-        Estado estado = Estado.NORMAL;
+     }
         
-        System.out.println("¡Nuevo Pokémon registrado exitosamente!");
-
-        pokemonesRegistrados.add(new NuevoPokemon(nombre, salud, puntosDeAtaque, tipos, estado));
-    }//Cierre registrarNuevoPokemon
      
      
     private static void iniciarBatalla(Scanner sc) {
