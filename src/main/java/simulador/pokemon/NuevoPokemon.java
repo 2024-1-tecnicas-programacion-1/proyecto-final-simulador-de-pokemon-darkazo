@@ -8,6 +8,9 @@ public class NuevoPokemon extends Pokemon {
         super(nombre, salud, puntosDeAtaque, tipo, estado);
     }
 
+//atacar
+// Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void atacar(Combatiente oponente) {
         System.out.println(this.getNombre() + " ataca contra " + oponente.getNombre());
@@ -17,6 +20,9 @@ public class NuevoPokemon extends Pokemon {
         System.out.println(oponente.getNombre() + " recibe " + daño + " puntos de daño.");
     }
 
+//recibirDaño
+//Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void recibirDaño(int daño) {
         int nuevaSalud = this.getSalud() - daño;

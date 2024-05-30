@@ -9,6 +9,9 @@ public class Drowzee extends Pokemon{
         super("Drowzee", 60, 48,Arrays.asList(TipoPokemon.PSIQUICO), Estado.NORMAL);
     }
     
+//atacar
+// Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void atacar(Combatiente oponente) {
         System.out.println(this.getNombre() + " ataca contra " + oponente.getNombre());
@@ -17,6 +20,10 @@ public class Drowzee extends Pokemon{
         oponente.recibirDaño(daño);
         System.out.println(oponente.getNombre() + " recibe " + daño + " puntos de daño.");
     }//Cierre atacar
+    
+//recibirDaño
+//Complejidad temporal: O(1) Tiempo constante.
+
 
     @Override
     public void recibirDaño(int daño) {

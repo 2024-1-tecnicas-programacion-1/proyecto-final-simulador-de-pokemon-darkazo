@@ -6,6 +6,9 @@ import simulador.pokemon.TipoPokemon;
 
 public class Batalla {
     
+//iniciarBatalla
+// Complejidad temporal: O(n) Tiempo lineal.
+    
     public void iniciarBatalla(Pokemon pokemon1, Pokemon pokemon2){
         
         System.out.println("¡Comienza la batalla entre "+pokemon1.getNombre()+" y "+pokemon2.getNombre()+"!");

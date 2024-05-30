@@ -6,6 +6,9 @@ public enum TipoPokemon {
     
     FUEGO,AGUA,PLANTA,VENENO,ELECTRICO,PSIQUICO,ROCA,TIERRA,NORMAL,VOLADOR,HADA,LUCHA,ACERO,BICHO,HIELO,FANTASMA,DRAGON;
     
+//obtenerMultiplicadorDeDaño
+// Complejidad cuadrática: O(N^2) Tiempo cuadrático.
+    
     public static double obtenerMultiplicadorDeDaño(List<TipoPokemon> tiposAtacante, List<TipoPokemon> tiposDefensor) {
         double multiplicador = 1.0;
         for (TipoPokemon atacante : tiposAtacante) {
@@ -15,7 +18,11 @@ public enum TipoPokemon {
         }
         return multiplicador;
     }
-    
+
+//obtenerMultiplicadorDeDaño
+//Complejidad constante: O(1) Tiempo constante.
+
+
     public static double obtenerMultiplicadorDeDaño(TipoPokemon atacante, TipoPokemon defensor){
         double[][] efectividad = {
          // FUEGO  AGUA  PLANTA VENENO ELECT PSIQ ROCA TIERR NORM VOLADOR HADA LUCHA ACERO BICHO HIELO FANTA DRAG

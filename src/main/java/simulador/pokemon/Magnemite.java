@@ -9,6 +9,9 @@ public class Magnemite extends Pokemon{
         super("Magnemite", 25, 35,Arrays.asList(TipoPokemon.ELECTRICO, TipoPokemon.ACERO), Estado.NORMAL);
     }
 
+//atacar
+// Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void atacar(Combatiente oponente) {
         System.out.println(this.getNombre() + " ataca contra " + oponente.getNombre());
@@ -18,6 +21,9 @@ public class Magnemite extends Pokemon{
         System.out.println(oponente.getNombre() + " recibe " + daño + " puntos de daño.");
     }//Cierre atacar
 
+//recibirDaño
+//Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void recibirDaño(int daño) {
         

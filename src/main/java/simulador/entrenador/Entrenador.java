@@ -11,6 +11,9 @@ public class Entrenador{
         this.nombreEntrenador = nombreEntrenador;
         this.Pokemones = Pokemones;
     }
+    
+// agregarPokemon
+// Complejidad temporal: O(1) Tiempo constante.
 
     public void agregarPokemon(Pokemon pokemon) {
         if (Pokemones.size() < 6) {
@@ -20,7 +23,10 @@ public class Entrenador{
             System.out.println("El equipo ya está completo. No puedes añadir otro Pokémon.");
         }
     }
-    
+
+// entrenarPokemon
+// Complejidad temporal: O(1) Tiempo constante.
+
     public void entrenarPokemon(Pokemon pokemon) {
         if (Pokemones.contains(pokemon)) {
             pokemon.entrenar();
@@ -29,6 +35,9 @@ public class Entrenador{
             System.out.println("Pokemon no encontrado en el equipo");
         }
     }
+
+// mostrarPokemones
+// Complejidad temporal: O(N) Tiempo lineal.
     
     public void mostrarPokemones() {
         System.out.println("Pokémones de " + nombreEntrenador + ":");
@@ -36,6 +45,9 @@ public class Entrenador{
             System.out.println(i + ":" + Pokemones.get(i));
         }
     }
+
+// prepararBatalla
+// Complejidad temporal: O(N) Tiempo lineal.
     
     public void prepararBatalla(Pokemon pokemonSeleccionado) {
         if (Pokemones.contains(pokemonSeleccionado)) {

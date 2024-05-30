@@ -44,13 +44,28 @@ public class Principal {
         new Mankey(), 
         new Koffing()
     };
+    
+// Main 
+// Complejidad lineal: O(n) Tiempo lineal.
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
         do {
-            System.out.println("* Simulador de Batallas Pokémon DarKaZo *");
+            System.out.println("*DARKAZO: Domina las Batallas Pokémon!!*");
+            System.out.println("                                  ,'\\");
+            System.out.println("    _.----.        ____         ,'  _\\   ___    ___     ____");
+            System.out.println("_,-'       `.     |    |  /`.   \\,-'    |   \\  /   |   |    \\  |`.");
+            System.out.println("\\      __    \\    '-.  | /   `.  ___    |    \\/    |   '-.   \\ |  |");
+            System.out.println(" \\.    \\ \\   |  __  |  |/    ,','_  `.  |          | __  |    \\|  |");
+            System.out.println("   \\    \\/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |");
+            System.out.println("    \\     ,-'/  /   \\    ,'   | \\/ / ,`.|         /  /   \\  |     |");
+            System.out.println("     \\    \\ |   \\_/  |   `-.  \\    `'  /|  |    ||   \\_/  | |\\    |");
+            System.out.println("      \\    \\ \\      /       `-.`.___,-' |  |\\  /| \\      /  | |   |");
+            System.out.println("       \\    \\ `.__,'|  |`-._    `|      |__| \\/ |  `.__,'|  | |   |");
+            System.out.println("        \\_.-'       |__|    `-._ |              '-.|     '-.| |   |");
+            System.out.println("                                `'                            '-._|");
             System.out.println("");
             System.out.println("1. Gestionar Entrenadores");
             System.out.println("2. Gestionar Pokémones");
@@ -82,6 +97,9 @@ public class Principal {
             }
         } while (opcion != 4);
     }//Main
+    
+// gestionarEntrenadores 
+// Complejidad lineal: O(n) Tiempo lineal    
 
     private static void gestionarEntrenadores(Scanner sc) {
         int opcion;
@@ -134,6 +152,9 @@ public class Principal {
         } while (opcion != 4);
 
     }//Gestionar Entrenadores
+    
+// verListaEntrenadores
+// Complejidad lineal: O(n) Tiempo lineal.
 
     private static void verListaEntrenadores() {
         System.out.println("Lista de Entrenadores:");
@@ -141,6 +162,9 @@ public class Principal {
             System.out.println((i + 1) + ". " + entrenadores.get(i).getNombreEntrenador());
         }
     }//Cierre VerEntrenadores
+    
+//gestionarEntrenadorSeleccionado 
+// Complejidad lineal: O(n) Tiempo lineal.    
     
     public static void gestionarEntrenadorSeleccionado(Scanner sc, Entrenador entrenador) {
         int opcion;
@@ -177,6 +201,9 @@ public class Principal {
         } while (opcion != 4);
     }//Cierre gestionar entrenadores
     
+// agregarPokemonAlEquipo
+// Complejidad constante: O(1) Tiempo constante.
+    
     public static void agregarPokemonAlEquipo(Scanner sc, Entrenador entrenador){
         System.out.println("Es momento de atrapar un nuevo Pokemon a tu equipo " + entrenador.getNombreEntrenador());
         for (int i = 0; i < pokemonesPredefinidos.length; i++) {
@@ -192,6 +219,9 @@ public class Principal {
         }
     }//Cierre agregarPokemon
     
+// entrenarPokemon 
+// Complejidad constante: O(1) Tiempo constante.
+    
     public static void entrenarPokemon(Scanner sc, Entrenador entrenador){
         System.out.println("Entrenar Pokemones:");
         entrenador.mostrarPokemones();
@@ -203,6 +233,9 @@ public class Principal {
             System.out.println("Ese Pokemon no esta en tu Equipo");
         }
     }//Cierre entrenarPokemon
+    
+// gestionarPokemones 
+// Complejidad lineal: O(n) Tiempo lineal. 
     
      private static void gestionarPokemones(Scanner sc) {
         int opcion;
@@ -233,6 +266,10 @@ public class Principal {
         } while (opcion != 3);
      }//Cierre gestionarPokemones
      
+//verPokemonesRegistrados
+// Complejidad lineal: O(n) Tiempo lineal.
+
+     
      private static void verPokemonesRegistrados() {
         System.out.println("Pokémones Registrados:");
         for (int i = 0; i < pokemonesPredefinidos.length; i++) {
@@ -249,6 +286,9 @@ public class Principal {
         System.out.println("");
 
     }//Cierre verPokemonesRegistrados
+     
+// registrarNuevoPokemon 
+// Complejidad constante: O(1) Tiempo constante.
      
      public static void registrarNuevoPokemon(Scanner sc) {
         System.out.println("Registrar nuevo Pokémon:");
@@ -294,7 +334,8 @@ public class Principal {
         pokemonesRegistrados.add(new NuevoPokemon(nombre, salud, puntosDeAtaque, tipos, estado));
     }//Cierre registrarNuevoPokemon
         
-     
+// iniciarBatalla 
+// Complejidad lineal: O(n) Tiempo lineal.
      
     private static void iniciarBatalla(Scanner sc) {
         int opcion;

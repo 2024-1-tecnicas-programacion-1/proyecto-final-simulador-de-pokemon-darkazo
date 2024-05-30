@@ -10,6 +10,9 @@ public class Rhyhorn extends Pokemon{
         super("Rhyhorn", 80, 85,Arrays.asList(TipoPokemon.TIERRA, TipoPokemon.ROCA), Estado.NORMAL);
     }
     
+//atacar
+// Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void atacar(Combatiente oponente) {
         System.out.println(this.getNombre() + " ataca contra " + oponente.getNombre());
@@ -18,6 +21,9 @@ public class Rhyhorn extends Pokemon{
         oponente.recibirDaño(daño);
         System.out.println(oponente.getNombre() + " recibe " + daño + " puntos de daño.");
     }//Cierre atacar
+    
+//recibirDaño
+//Complejidad temporal: O(1) Tiempo constante.
 
     @Override
     public void recibirDaño(int daño) {

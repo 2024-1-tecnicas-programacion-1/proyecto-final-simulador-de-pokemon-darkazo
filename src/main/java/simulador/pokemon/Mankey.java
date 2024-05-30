@@ -9,6 +9,9 @@ public class Mankey extends Pokemon{
         super("Mankey", 40, 80, Arrays.asList(TipoPokemon.LUCHA), Estado.NORMAL);
     }
     
+//atacar
+// Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void atacar(Combatiente oponente) {
         System.out.println(this.getNombre() + " ataca contra " + oponente.getNombre());
@@ -18,6 +21,9 @@ public class Mankey extends Pokemon{
         System.out.println(oponente.getNombre() + " recibe " + daño + " puntos de daño.");
     }//Cierre atacar
 
+//recibirDaño
+//Complejidad temporal: O(1) Tiempo constante.
+    
     @Override
     public void recibirDaño(int daño) {
         
