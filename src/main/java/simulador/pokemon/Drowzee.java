@@ -11,14 +11,16 @@ public class Drowzee extends Pokemon{
     public void atacar (Combatiente oponente){
         if (oponente instanceof Pokemon){
             Pokemon pokemonOponente = (Pokemon) oponente;
-            double multiplicador = TipoPokemon.obtenerMultiplicadorDeDaño(this.getTipo(), pokemonOponente.getTipo());
-            int dañoBase= this.getPuntosDeAtaque();
-            int dañoFinal= (int) (dañoBase * multiplicador);
+            double multiplicador = TipoPokemon.obtenerMultiplicadorDeDanio(this.getTipo(), pokemonOponente.getTipo());
+            int danioBase= this.getPuntosDeAtaque();
+            int danioFinal= (int) (danioBase * multiplicador);
             System.out.println(this.getNombre()+" ATACA!");
-            pokemonOponente.recibirDaño(dañoFinal);
+            pokemonOponente.recibirDanio(danioFinal);
         }else {
             System.out.println("El oponente no es un Pokémon valido.");
         }
     }
+       
 }
+
 

@@ -35,6 +35,14 @@ public abstract class Pokemon implements Combatiente{
         this.salud = salud;
     }
 
+    public void setNombrePokemon(String nombrePokemon) {
+        this.nombrePokemon = nombrePokemon;
+    }
+
+    public void setTipo(TipoPokemon tipo) {
+        this.tipo = tipo;
+    }
+
     public int getPuntosDeAtaque() {
         return puntosDeAtaque;
     }
@@ -57,10 +65,10 @@ public abstract class Pokemon implements Combatiente{
 
     public abstract void atacar(Combatiente oponentPokemon);
     
-    public int recibirDaño(int daño){
-        int nuevaSalud=this.salud - daño;
+    public int recibirDanio(int danio){
+        int nuevaSalud=this.salud - danio;
         this.setSalud(nuevaSalud);
-        System.out.println(this.getNombre()+" recibe "+daño+" puntos de daño. Salud restante: "+nuevaSalud);
+        System.out.println(this.getNombre()+" recibe "+danio+" puntos de daño. Salud restante: "+nuevaSalud);
         return nuevaSalud;
     }
     
