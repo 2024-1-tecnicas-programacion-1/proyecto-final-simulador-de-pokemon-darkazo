@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Magnemite extends Pokemon{
     
     public Magnemite(){
-        super("Magnemite", 25, 35,Arrays.asList("ELECTRICO", "ACERO"), Estado.NORMAL);
+        super("Magnemite", 25, 35,Arrays.asList(TipoPokemon.ELECTRICO, TipoPokemon.ACERO), Estado.NORMAL);
     }
 
     @Override

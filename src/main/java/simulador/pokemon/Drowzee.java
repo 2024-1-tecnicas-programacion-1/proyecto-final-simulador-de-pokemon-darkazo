@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Drowzee extends Pokemon{
     
     public Drowzee(){
-        super("Drowzee", 60, 48,Arrays.asList("PSIQUICO"), Estado.NORMAL);
+        super("Drowzee", 60, 48,Arrays.asList(TipoPokemon.PSIQUICO), Estado.NORMAL);
     }
     
     @Override

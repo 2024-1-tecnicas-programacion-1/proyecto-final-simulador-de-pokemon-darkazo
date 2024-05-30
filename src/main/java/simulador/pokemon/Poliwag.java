@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Poliwag extends Pokemon {
     
     public Poliwag (){
-        super("Poliwag", 40, 50,Arrays.asList("AGUA"), Estado.NORMAL);
+        super("Poliwag", 40, 50,Arrays.asList(TipoPokemon.AGUA), Estado.NORMAL);
     }
     
     @Override

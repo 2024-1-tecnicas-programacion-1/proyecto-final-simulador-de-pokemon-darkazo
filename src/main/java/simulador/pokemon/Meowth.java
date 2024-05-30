@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Meowth extends Pokemon{
     
     public Meowth (){
-        super("Meowth", 40, 45,Arrays.asList("NORMAL"), Estado.NORMAL);
+        super("Meowth", 40, 45,Arrays.asList(TipoPokemon.NORMAL), Estado.NORMAL);
     }
     
     @Override

@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Vulpix extends Pokemon {
 
    public Vulpix() {
-        super("Vulpix", 38, 41,Arrays.asList("FUEGO"), Estado.NORMAL);
+        super("Vulpix", 38, 41,Arrays.asList(TipoPokemon.FUEGO), Estado.NORMAL);
     }
 
     @Override

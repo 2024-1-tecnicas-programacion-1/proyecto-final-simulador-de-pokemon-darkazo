@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Oddish extends Pokemon{
     
     public Oddish() {
-        super("Oddish", 45, 50,Arrays.asList("PLANTA", "VENENO"), Estado.NORMAL);
+        super("Oddish", 45, 50,Arrays.asList(TipoPokemon.PLANTA, TipoPokemon.VENENO), Estado.NORMAL);
     }
 
     @Override

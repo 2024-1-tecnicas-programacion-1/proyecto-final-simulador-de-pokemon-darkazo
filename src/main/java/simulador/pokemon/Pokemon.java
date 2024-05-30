@@ -10,7 +10,7 @@ public abstract class Pokemon implements Combatiente {
     private List<TipoPokemon> tipo;
     private Estado estado;
 
-    public Pokemon(String nombrePokemon, int salud, int puntosDeAtaque, List<String> tipos, Estado estado) {
+    public Pokemon(String nombrePokemon, int salud, int puntosDeAtaque, List<TipoPokemon> tipos, Estado estado) {
         this.nombrePokemon = nombrePokemon;
         this.salud = salud;
         this.puntosDeAtaque = puntosDeAtaque;

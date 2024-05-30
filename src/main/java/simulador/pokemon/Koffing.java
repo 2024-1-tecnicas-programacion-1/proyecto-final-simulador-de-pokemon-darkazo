@@ -2,11 +2,13 @@
 package simulador.pokemon;
 
 import java.util.Arrays;
+import simulador.pokemon.TipoPokemon;
+
 
 public class Koffing extends Pokemon{
     
     public Koffing (){
-        super("Koffing", 40, 65,Arrays.asList("VENENO"), Estado.NORMAL);
+        super("Koffing", 40, 65,Arrays.asList(TipoPokemon.VENENO), Estado.NORMAL);
     }
     @Override
     public void atacar(Combatiente oponente) {

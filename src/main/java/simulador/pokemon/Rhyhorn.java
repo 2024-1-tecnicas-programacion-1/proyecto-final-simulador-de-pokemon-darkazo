@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Rhyhorn extends Pokemon{
     
     public Rhyhorn() {
-        super("Rhyhorn", 80, 85,Arrays.asList("TIERRA", "ROCA"), Estado.NORMAL);
+        super("Rhyhorn", 80, 85,Arrays.asList(TipoPokemon.TIERRA, TipoPokemon.ROCA), Estado.NORMAL);
     }
     
     @Override

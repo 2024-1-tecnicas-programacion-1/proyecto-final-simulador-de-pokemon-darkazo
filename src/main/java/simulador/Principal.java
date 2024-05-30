@@ -263,7 +263,36 @@ public class Principal {
                 System.out.println("");
             }
         }
-     }
+
+        System.out.print("Ingrese la salud del nuevo Pokémon: ");
+        int salud = sc.nextInt();
+        System.out.print("Ingrese los puntos de ataque del nuevo Pokémon: ");
+        int puntosDeAtaque = sc.nextInt();
+        System.out.print("Ingrese el tipo del nuevo Pokémon (FUEGO, AGUA, PLANTA, etc.): ");
+        String tiposInput = sc.nextLine();
+        List<TipoPokemon> tipos = new ArrayList<>();
+        boolean tiposValidos = true;
+        
+        for (String tipo : tiposInput.split(",")) {
+            try {
+                tipos.add(TipoPokemon.valueOf(tipo.trim().toUpperCase()));
+            } catch (IllegalArgumentException e) {
+                System.out.println("Tipo de Pokémon inválido: " + tipo.trim());
+                tiposValidos = false;
+                break;
+            }
+        }
+
+        if (!tiposValidos) {
+            System.out.println("Registro cancelado debido a tipos inválidos.");
+            return; // Salir del método si algún tipo no es válido
+        }
+        Estado estado = Estado.NORMAL;
+        
+        System.out.println("¡Nuevo Pokémon registrado exitosamente!");
+
+        pokemonesRegistrados.add(new NuevoPokemon(nombre, salud, puntosDeAtaque, tipos, estado));
+    }//Cierre registrarNuevoPokemon
         
      
      

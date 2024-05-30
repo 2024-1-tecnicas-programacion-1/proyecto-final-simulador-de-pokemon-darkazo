@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Spearow extends Pokemon{
     
     public Spearow(){
-        super("Spearow", 40, 60,Arrays.asList("NORMAL", "VOLADOR"), Estado.NORMAL);
+        super("Spearow", 40, 60,Arrays.asList(TipoPokemon.NORMAL, TipoPokemon.VOLADOR), Estado.NORMAL);
     }
     
     @Override

@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Mankey extends Pokemon{
     
     public Mankey (){
-        super("Mankey", 40, 80,Arrays.asList("LUCHA"), Estado.NORMAL);
+        super("Mankey", 40, 80, Arrays.asList(TipoPokemon.LUCHA), Estado.NORMAL);
     }
     
     @Override
