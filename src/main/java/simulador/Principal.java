@@ -1,4 +1,5 @@
 package simulador;
+
 import simulador.pokemon.Pokemon;
 import simulador.pokemon.TipoPokemon;
 import java.util.Scanner;
@@ -7,9 +8,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import simulador.batalla.Batalla;
 import simulador.entrenador.Entrenador;
-<<<<<<< Updated upstream
+
 import simulador.pokemon.Vulpix;
-=======
+
 import simulador.pokemon.Estado;
 import simulador.pokemon.Vulpix;
 import simulador.pokemon.Poliwag;
@@ -22,7 +23,6 @@ import simulador.pokemon.Meowth;
 import simulador.pokemon.Mankey;
 import simulador.pokemon.Koffing;
 import simulador.pokemon.NuevoPokemon;
->>>>>>> Stashed changes
 
 public class Principal {
     
@@ -32,9 +32,6 @@ public class Principal {
     private static Entrenador entrenador2;
     private static Pokemon pokemon1;
     private static Pokemon pokemon2;
-<<<<<<< Updated upstream
-    private static final Pokemon[] pokemonesPredefinidos = {new Vulpix()};
-=======
     private static Pokemon[] pokemonesPredefinidos = {
         new Vulpix(), 
         new Poliwag(), 
@@ -47,29 +44,21 @@ public class Principal {
         new Mankey(), 
         new Koffing()
     };
->>>>>>> Stashed changes
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
         do {
-<<<<<<< Updated upstream
-            System.out.println("*** Simulador de Batallas Pokémon DarKaZo ***");
-=======
             System.out.println("* Simulador de Batallas Pokémon DarKaZo *");
             System.out.println("");
->>>>>>> Stashed changes
             System.out.println("1. Gestionar Entrenadores");
             System.out.println("2. Gestionar Pokémones");
             System.out.println("3. Iniciar Batalla");
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
-<<<<<<< Updated upstream
-=======
             System.out.println("");
->>>>>>> Stashed changes
             sc.nextLine();
 
             switch (opcion) {
@@ -77,19 +66,11 @@ public class Principal {
                     gestionarEntrenadores(sc);
                     break;
                 case 2:
-<<<<<<< Updated upstream
-
-                    break;
-
-                case 3:
-
-=======
                     gestionarPokemones(sc);
                     break;
 
                 case 3:
                     iniciarBatalla(sc);
->>>>>>> Stashed changes
                     break;
 
                 case 4:
@@ -106,10 +87,7 @@ public class Principal {
         int opcion;
         String nombre;
         do {
-<<<<<<< Updated upstream
-=======
             System.out.println("");
->>>>>>> Stashed changes
             System.out.println("Gestionar Entrenadores");
             System.out.println("");
             System.out.println("1. Registrar nuevo entrenador");
@@ -118,10 +96,7 @@ public class Principal {
             System.out.println("4. Volver al menú principal");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
-<<<<<<< Updated upstream
-=======
             System.out.println("");
->>>>>>> Stashed changes
             sc.nextLine();
 
             switch (opcion) {
@@ -170,21 +145,15 @@ public class Principal {
     public static void gestionarEntrenadorSeleccionado(Scanner sc, Entrenador entrenador) {
         int opcion;
         do {
-<<<<<<< Updated upstream
-            System.out.println("Gestionando a " + entrenador.getNombreEntrenador());
-=======
             
             System.out.println("Gestionando a " + entrenador.getNombreEntrenador());
             System.out.println("");
->>>>>>> Stashed changes
             System.out.println("1. Ver equipo de Pokémones");
             System.out.println("2. Agregar Pokémon al equipo");
             System.out.println("3. Entrenar Pokémon");
             System.out.println("4. Volver a Gestionar Entrenadores");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
-<<<<<<< Updated upstream
-=======
             System.out.println("");
             sc.nextLine();
 
@@ -300,12 +269,16 @@ public class Principal {
         System.out.print("Ingrese los puntos de ataque del nuevo Pokémon: ");
         int puntosDeAtaque = sc.nextInt();
         System.out.print("Ingrese el tipo del nuevo Pokémon (FUEGO, AGUA, PLANTA, etc.): ");
-        TipoPokemon tipo = TipoPokemon.valueOf(sc.next().toUpperCase());
-        Estado estado = Estado.Normal;
+        String tiposInput = sc.nextLine();
+        List<TipoPokemon> tipos = new ArrayList<>();
+        for (String tipo : tiposInput.split(",")) {
+            tipos.add(TipoPokemon.valueOf(tipo.trim().toUpperCase()));
+        }
+        Estado estado = Estado.NORMAL;
         
         System.out.println("¡Nuevo Pokémon registrado exitosamente!");
 
-        pokemonesRegistrados.add(new NuevoPokemon(nombre, salud, puntosDeAtaque, tipo, estado));
+        pokemonesRegistrados.add(new NuevoPokemon(nombre, salud, puntosDeAtaque, tipos, estado));
     }//Cierre registrarNuevoPokemon
      
      
@@ -322,23 +295,10 @@ public class Principal {
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
             System.out.println("");
->>>>>>> Stashed changes
             sc.nextLine();
 
             switch (opcion) {
                 case 1:
-<<<<<<< Updated upstream
-                    entrenador.mostrarPokemones();
-                    break;
-                case 2:
-                    agregarPokemonAlEquipo(sc, entrenador);
-                    break;
-                case 3:
-                    entrenarPokemon(sc, entrenador);
-                    break;
-                case 4:
-                    System.out.println("Volviendo a gestionar entrenadores...");
-=======
                     verListaEntrenadores();
                     System.out.print("Selecciona el número del primer entrenador: ");
                     int indiceEntrenador1 = sc.nextInt() - 1;
@@ -402,45 +362,12 @@ public class Principal {
                     break;
                 case 6:
                     System.out.println("Volviendo al menú principal...");
->>>>>>> Stashed changes
                     break;
                 default:
                     System.out.println("Opción inválida");
                     break;
             }
-<<<<<<< Updated upstream
-        } while (opcion != 4);
-    }//Cierre gestionar entrenadores
-    
-    public static void agregarPokemonAlEquipo(Scanner sc, Entrenador entrenador){
-        System.out.println("Es momento de atrapar un nuevo Pokemon a tu equipo " + entrenador.getNombreEntrenador());
-        for (int i = 0; i < pokemonesPredefinidos.length; i++) {
-            Pokemon pokemon = pokemonesPredefinidos[i];
-            System.out.println((i+1)+"." + pokemon.getNombre() + " (salud: " + pokemon.getSalud()+", Ataque: " + pokemon.getPuntosDeAtaque() + ", Tipo: " + pokemon.getTipo()+")");
-        }//Cierre for
-        
-        int indice = sc.nextInt()-1;
-        if(indice >=0 && indice<pokemonesPredefinidos.length){
-            entrenador.agregarPokemon(pokemonesPredefinidos[indice]);
-        }else{
-            System.out.println("Indice no valido");
-        }
-    }//Cierre agregarPokemon
-    
-    public static void entrenarPokemon(Scanner sc, Entrenador entrenador){
-        System.out.println("Entrenar Pokemones:");
-        entrenador.mostrarPokemones();
-        System.out.println("Seleccione un Pokemon para entrenar");
-        int indice = sc.nextInt();
-        if(indice>=0 && indice < entrenador.getPokemones().size()){
-            Pokemon pokemones = entrenador.getPokemones().get(indice);
-        }else{
-            System.out.println("Ese Pokemon no esta en tu Equipo");
-        }
-    }//Cierre entrenarPokemon
-=======
         } while (opcion != 6);
      }//Cierre iniciarBatalla
->>>>>>> Stashed changes
         
 }//Cierre class

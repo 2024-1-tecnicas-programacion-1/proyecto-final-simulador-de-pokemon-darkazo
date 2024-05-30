@@ -4,5 +4,5 @@ import java.io.Serializable;
 
 
 public enum Estado implements Serializable{
-    Normal,Debilitado;
+    NORMAL,DEBILITADO;
 }//Cierre class Estado

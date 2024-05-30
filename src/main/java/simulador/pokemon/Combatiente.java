@@ -1,8 +1,10 @@
 package simulador.pokemon;
 
+import java.util.List;
+
 public interface Combatiente {
 
-    void atacar(Combatiente pokemonOponent);
+    void atacar(Combatiente oponente);
 
     boolean estaVivo();
 
@@ -11,4 +13,8 @@ public interface Combatiente {
     int getSalud();
 
     void setSalud(int salud);
+    
+    List<TipoPokemon> getTipo();
+
+    void recibirDaño(int daño);
 }

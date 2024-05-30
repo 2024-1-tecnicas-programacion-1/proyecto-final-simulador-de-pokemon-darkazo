@@ -1,10 +1,22 @@
 package simulador.pokemon;
 
+import java.util.List;
+
 public enum TipoPokemon {
     
     FUEGO,AGUA,PLANTA,VENENO,ELECTRICO,PSIQUICO,ROCA,TIERRA,NORMAL,VOLADOR,HADA,LUCHA,ACERO,BICHO,HIELO,FANTASMA,DRAGON;
     
-    public static double obtenerMultiplicadorDeDanio(TipoPokemon atacante, TipoPokemon defensor){
+    public static double obtenerMultiplicadorDeDaño(List<TipoPokemon> tiposAtacante, List<TipoPokemon> tiposDefensor) {
+        double multiplicador = 1.0;
+        for (TipoPokemon atacante : tiposAtacante) {
+            for (TipoPokemon defensor : tiposDefensor) {
+                multiplicador *= obtenerMultiplicadorDeDaño(atacante, defensor);
+            }
+        }
+        return multiplicador;
+    }
+    
+    public static double obtenerMultiplicadorDeDaño(TipoPokemon atacante, TipoPokemon defensor){
         double[][] efectividad = {
          // FUEGO  AGUA  PLANTA VENENO ELECT PSIQ ROCA TIERR NORM VOLADOR HADA LUCHA ACERO BICHO HIELO FANTA DRAG
             { 1,    0.5,   2,    1,    1,    1,   0.5,   1,    1,    1,    1,    1,   0.5,   2,    2,    1,  0.5 }, // FUEGO

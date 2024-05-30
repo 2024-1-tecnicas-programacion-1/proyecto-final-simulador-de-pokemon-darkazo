@@ -3,6 +3,7 @@ package simulador.batalla;
 import simulador.pokemon.Pokemon;
 import simulador.pokemon.TipoPokemon;
 
+
 public class Batalla {
     
     public void iniciarBatalla(Pokemon pokemon1, Pokemon pokemon2){
